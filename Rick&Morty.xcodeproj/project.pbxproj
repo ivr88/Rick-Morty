@@ -17,7 +17,6 @@
 		1C2914D92C481DFB00878EE7 /* Rick-Morty-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C2914D82C481DFB00878EE7 /* Rick-Morty-Info.plist */; };
 		1C2914DD2C4830CA00878EE7 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2914DC2C4830CA00878EE7 /* DetailView.swift */; };
 		1C2914E22C48377300878EE7 /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2914E12C48377300878EE7 /* CoordinatorView.swift */; };
-		1C4BAB482C49B14900351F87 /* ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4BAB472C49B14800351F87 /* ClearButton.swift */; };
 		1CCF80DF2C490635009A0BCE /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCF80DE2C490635009A0BCE /* SplashView.swift */; };
 		1CCF80E12C491ADD009A0BCE /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCF80E02C491ADD009A0BCE /* ErrorView.swift */; };
 		1CCF80EA2C49462F009A0BCE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCF80E92C49462F009A0BCE /* NetworkManager.swift */; };
@@ -40,7 +39,6 @@
 		1C2914DB2C482B0F00878EE7 /* IBMPlexSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Bold.ttf"; sourceTree = "<group>"; };
 		1C2914DC2C4830CA00878EE7 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		1C2914E12C48377300878EE7 /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
-		1C4BAB472C49B14800351F87 /* ClearButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClearButton.swift; sourceTree = "<group>"; };
 		1CCF80DE2C490635009A0BCE /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		1CCF80E02C491ADD009A0BCE /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		1CCF80E92C49462F009A0BCE /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -84,7 +82,6 @@
 				1C2914CB2C47D0A300878EE7 /* Model */,
 				1CCF80E82C494626009A0BCE /* NetworkManager */,
 				1C2914D62C481BFB00878EE7 /* Resourse */,
-				1C4BAB462C49B13400351F87 /* Helper */,
 				1C2914C12C47CFF800878EE7 /* Preview Content */,
 			);
 			path = "Rick&Morty";
@@ -180,14 +177,6 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		1C4BAB462C49B13400351F87 /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-				1C4BAB472C49B14800351F87 /* ClearButton.swift */,
-			);
-			path = Helper;
-			sourceTree = "<group>";
-		};
 		1CCF80E82C494626009A0BCE /* NetworkManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,7 +263,6 @@
 				1C2914BE2C47CFF600878EE7 /* ListView.swift in Sources */,
 				1CDE967C2C4ACE5E00064443 /* DetailViewModel.swift in Sources */,
 				1CCF80DF2C490635009A0BCE /* SplashView.swift in Sources */,
-				1C4BAB482C49B14900351F87 /* ClearButton.swift in Sources */,
 				1C2914D02C47D63C00878EE7 /* ListViewModel.swift in Sources */,
 				1C2914DD2C4830CA00878EE7 /* DetailView.swift in Sources */,
 				1C2914BC2C47CFF600878EE7 /* Rick_MortyApp.swift in Sources */,
