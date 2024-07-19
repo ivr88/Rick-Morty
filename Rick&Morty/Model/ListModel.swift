@@ -1,6 +1,6 @@
 import Foundation
 
-// MARK: - ListModel
+// MARK: - Model
 struct ListModel: Codable {
     let results: [Result]
 }
@@ -15,6 +15,8 @@ struct Result: Codable {
     let origin, location: Location
     let image: String
     let episode: [String]
+    
+    static let example = Result(id: Int(), name: String(), status: .alive, species: .alien, gender: .female, origin: Location.init(name: String(), url: String()), location: Location.init(name: String(), url: String()), image: String(), episode: [String()])
 }
 
 enum Gender: String, Codable {
@@ -39,3 +41,5 @@ enum Status: String, Codable {
     case dead = "Dead"
     case unknown = "unknown"
 }
+
+

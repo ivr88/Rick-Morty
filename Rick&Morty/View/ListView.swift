@@ -3,16 +3,11 @@ import SwiftUI
 struct ListView: View {
     @ObservedObject private var listViewModel = ListViewModel()
     var body: some View {
-        Color.black
-            .ignoresSafeArea()
-            .overlay (
         VStack {
             NavigationStack {
-                Text("Rick & Morty Characters")
-                    .font(.custom("IBMPlexSans-Bold", size: 24))
                 List(listViewModel.listModel?.results ?? [], id: \.id) { result in
                     NavigationLink {
-                        DetailView(id: result.id)
+                        DetailView(result: result)
                             .toolbarRole(.editor)
                     } label: {
                         HStack {
@@ -27,11 +22,14 @@ struct ListView: View {
                                     .font(.custom("IBMPlexSans-Medium", size: 18))
                                 HStack {
                                     if result.status.rawValue == "Alive" {
-                                        Text(result.status.rawValue).foregroundStyle(Color(UIColor(named: "#198737") ?? .white))
+                                        Text(result.status.rawValue)
+                                            .foregroundStyle(Color(UIColor(named: "#198737") ?? .white))
                                     } else if result.status.rawValue == "Dead" {
-                                        Text(result.status.rawValue).foregroundStyle(Color(UIColor(named: "#D62300") ?? .white))
+                                        Text(result.status.rawValue)
+                                            .foregroundStyle(Color(UIColor(named: "#D62300") ?? .white))
                                     } else {
-                                        Text(result.status.rawValue).foregroundStyle(Color(UIColor(named: "#686874") ?? .white))
+                                        Text(result.status.rawValue)
+                                            .foregroundStyle(Color(UIColor(named: "#686874") ?? .white))
                                     }
                                     Text("•")
                                     Text(result.species.rawValue)
@@ -44,18 +42,28 @@ struct ListView: View {
                         }
                     }
                     .listRowBackground(Color(UIColor(named: "#151517") ?? .white))
+                    .toolbar {
+                        ToolbarItem(placement: .principal) {
+                            Text("Rick & Morty Characters")
+                                .foregroundColor(.white)
+                                .font(.custom("IBMPlexSans-Bold", size: 24))
+                        }
+                    }
+                    .toolbarBackground(.black, for: .navigationBar)
                 }
                 .scrollContentBackground(.hidden)
                 .background(.black)
                 .listRowSpacing(4)
                 .scrollIndicators(.hidden)
             }
+            .background(.black)
         }
+        .background(.black)
         .tint(.white)
         .foregroundStyle(.white)
         .onAppear {
             listViewModel.fetch()
-        })
+        }
     }
 }
 
